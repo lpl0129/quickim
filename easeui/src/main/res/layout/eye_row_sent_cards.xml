@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingTop="13dp">
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_chat_activity">
+
+        <com.hyphenate.easeui.widget.EaseImageView
+                android:id="@+id/iv_userhead"
+                android:layout_width="@dimen/size_avatar"
+                android:layout_height="@dimen/size_avatar"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/margin_chat_activity"
+                android:scaleType="fitXY"
+                android:src="@drawable/ease_default_avatar"/>
+
+        <LinearLayout
+                android:id="@+id/bubble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical"
+                android:layout_toLeftOf="@+id/iv_userhead"
+                android:background="#fff">
+
+            <TextView
+                    android:id="@+id/tv_name_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_head_card"
+                    android:textColor="#333"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:text="线上咨询号：100000000000000"/>
+            <View android:layout_width="match_parent"
+                  android:layout_height="1dp"
+                  android:layout_marginLeft="12dp"
+                  android:layout_marginRight="12dp"
+                  android:background="#f1f1f1"
+            />
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/iv_head_card"
+                    android:textColor="#f99e1b"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:text="病情描述"/>
+            <TextView
+                    android:id="@+id/tv_city_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_name_card"
+                    android:layout_toRightOf="@+id/iv_head_card"
+                    android:maxLines="2"
+                    android:padding="5dp"
+                    android:textColor="#999"
+                    android:textSize="12sp"
+                    android:text="近期拉肚子拉肚子呀拉肚子，吃坏了，则呢么办，怎么才能吃什么或..."/>
+            <ImageView
+                    android:id="@+id/iv_head_card"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/ease_default_avatar"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
