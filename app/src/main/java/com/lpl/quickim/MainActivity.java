@@ -37,6 +37,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        Button sendIm = findViewById(R.id.send_im_button);
+        sendIm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(MainActivity.this, ChatActivity.class);
+                // it's single chat
+                intent.putExtra(Constant.EXTRA_USER_ID, "15333333333");
+                intent.putExtra(Constant.I_IM, 1);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initIM() {

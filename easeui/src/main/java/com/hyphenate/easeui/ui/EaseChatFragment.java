@@ -1305,12 +1305,11 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
         EMMessage message = EMMessage.createTxtSendMessage("测试下自定义消息", toChatUsername);
         //增加自己的属性
         message.setAttribute("cards", true);
-        message.setAttribute("CARDS", "cards");
-        message.setAttribute("USERNAME", "线上咨询：101020010210");
-        message.setAttribute("USERID", "1");
-        message.setAttribute("USERHEADER", "");
-        message.setAttribute("USERCITY", "肚子不舒服啊 啊 啊啊啊啊  ");
-        message.setAttribute("dataId", fragmentArgs.getString("dataId")!=null?fragmentArgs.getString("dataId"):"123");
+        message.setAttribute("CARDS", "自定义");
+        message.setAttribute("USERNAME", "自定义");
+        message.setAttribute("USERID", "自定义");
+        message.setAttribute("USERHEADER", "自定义");
+        message.setAttribute("USERCITY", "自定义");
         message.setChatType(EMMessage.ChatType.Chat);
         //发送扩展消息
         EMClient.getInstance().chatManager().sendMessage(message);
