@@ -16,6 +16,7 @@ import com.lpl.quickim.runtimepermissions.PermissionsResultAction;
 
 public class MainActivity extends AppCompatActivity {
 
+    //1109190116107051#niuniu
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,7 +34,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, ChatActivity.class);
                 // it's single chat
-                intent.putExtra(Constant.EXTRA_USER_ID, "15333333333");
+                //联系人的id
+                intent.putExtra(Constant.EXTRA_USER_ID, 联系人的id);
                 startActivity(intent);
             }
         });
@@ -44,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, ChatActivity.class);
                 // it's single chat
-                intent.putExtra(Constant.EXTRA_USER_ID, "15333333333");
+                //联系人的id
+                intent.putExtra(Constant.EXTRA_USER_ID, 联系人的id);
                 intent.putExtra(Constant.I_IM, 1);
                 startActivity(intent);
             }
@@ -52,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initIM() {
-        EMClient.getInstance().login("13691345442", "13691345442", new EMCallBack() {//回调
+        EMClient.getInstance().login(账号, 密码, new EMCallBack() {//回调
             @Override
             public void onSuccess() {
                 EMClient.getInstance().groupManager().loadAllGroups();

@@ -1,10 +1,13 @@
 1、修改manifest文件
-  <!-- 设置环信应用的AppKey -->
   <meta-data
    android:name="EASEMOB_APPKEY"
    android:value="你的APP_KEY"/>
    
-2、将EMClient.getInstance().login()的账号改成自己应有的
+2、将EMClient.getInstance().login()的账号改成自己的
+
+3、跳转到ChatActivity时填写联系让人id。
+
+为避免有人没有看readme，上述步骤需要替换的位置我写的中文，处于报错状态，这样就不会忘记改了。
 
 3、修改环信demo的APP_KEY，使用同一个应用下的账号登录，这样就可以测试集成效果了
 
