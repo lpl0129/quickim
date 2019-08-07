@@ -9,7 +9,9 @@
 3、修改环信demo的APP_KEY，使用同一个应用下的账号登录，这样就可以测试集成效果了
 
 4、如果你也需要自定义消息（如何自定义，可以百度），同时直接消息点击后跳转，切记注意布局文件中的控件id取名，不然收不到点击事件
-看EaseChatRow类中的setClickListener
+
+重点看EaseChatRow类中的setClickListener和
+
 自定义xxxChatCardPresenter extends EaseChatRowPresenter 类的onBubbleClick()方法
 
 
