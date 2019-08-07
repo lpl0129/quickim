@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.widget.BaseAdapter;
+import android.widget.Toast;
 
 import com.hyphenate.chat.EMMessage;
 import com.hyphenate.easeui.EaseConstant;
@@ -25,13 +26,6 @@ public class EyeChatCardPresenter extends EaseChatRowPresenter {
 
     @Override
     public void onBubbleClick(EMMessage message) {
-        System.out.println("-----------发送一个广播");
-        Intent intent = new Intent(EaseConstant.USER_ACTION_1);
-        try {
-            intent.putExtra("id",message.getStringAttribute("dataId"));
-        } catch (HyphenateException e) {
-            e.printStackTrace();
-        }
-        getContext().sendBroadcast(intent);
+        Toast.makeText(getContext(),"自定义消息的点击事件",Toast.LENGTH_LONG).show();
     }
 }

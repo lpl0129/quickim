@@ -295,7 +295,6 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
 
     @Override
     protected void setUpView() {
-        Log.e("toChatUsername", toChatUsername + "   ---- " + chatType);
         titleBar.setTitle(toChatUsername);
         //  titleBar.setVisibility(View.GONE);
         if (chatType == EaseConstant.CHATTYPE_SINGLE) {
@@ -303,7 +302,6 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
             setListItemClickListener();
             if (EaseUserUtils.getUserInfo(toChatUsername) != null) {
                 EaseUser user = EaseUserUtils.getUserInfo(toChatUsername);
-                Log.e("toChatUsername", user.toString() + "   ==== " + user.getNickname());
                 if (user != null) {
                     titleBar.setTitle(user.getNickname());
                 }
@@ -429,12 +427,10 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
     }
 
     protected void setListItemClickListener() {
-        Log.e("1231243", "000");
         messageList.setItemClickListener(new EaseChatMessageList.MessageListItemClickListener() {
 
             @Override
             public void onUserAvatarClick(String username) {
-                Log.e("1231243", "1111");
                 if (chatFragmentHelper != null) {
                     chatFragmentHelper.onAvatarClick(username);
                 }
@@ -443,7 +439,6 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
             @Override
             public boolean onResendClick(final EMMessage message) {
                 EMLog.i(TAG, "onResendClick");
-                Log.e("1231243", "222");
                 new EaseAlertDialog(getContext(), R.string.resend, R.string.confirm_resend, null, new EaseAlertDialog.AlertDialogUser() {
                     @Override
                     public void onResult(boolean confirmed, Bundle bundle) {
@@ -459,7 +454,6 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
 
             @Override
             public void onUserAvatarLongClick(String username) {
-                Log.e("1231243", "33");
                 if (chatFragmentHelper != null) {
                     chatFragmentHelper.onAvatarLongClick(username);
                 }
@@ -467,7 +461,6 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
 
             @Override
             public void onBubbleLongClick(EMMessage message) {
-                Log.e("1231243", "44");
                 contextMenuMessage = message;
                 if (chatFragmentHelper != null) {
                     chatFragmentHelper.onMessageBubbleLongClick(message);
@@ -485,7 +478,6 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
 
             @Override
             public void onMessageInProgress(EMMessage message) {
-                Log.e("1231243", "55");
                 message.setMessageStatusCallback(messageStatusCallback);
             }
         });
