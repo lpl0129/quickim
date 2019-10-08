@@ -9,3 +9,9 @@
 /build
 /captures
 .externalNativeBuild
+.idea/vcs.xml
+.idea/runConfigurations.xml
+.idea/misc.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/gradle.xml
+.idea/codeStyles/Project.xml
